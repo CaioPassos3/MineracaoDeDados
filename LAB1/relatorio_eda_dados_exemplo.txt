@@ -1,0 +1,163 @@
+RELATÓRIO EDA — dados_exemplo_eda
+================================
+
+Sumário do dataset
+------------------
+- Linhas: 1,500
+- Colunas: 11
+- Valores faltantes (total): 134 (0.81%)
+- Colunas numéricas: 7
+- Colunas categóricas: 4
+
+Detalhes por coluna numérica
+----------------------------
+[Numérica] id — n=1500
+  Locação: min=1, Q1=375.75, mediana=750.5, Q3=1125.25, máx=1500
+  Média/Dispersão: média=750.5, DP=433.157, variância=187625, IQR=749.5, MAD=375
+  Distribuição: skew=0, curtose(excesso)=-1.2, Bowley=0
+  Outliers (Tukey 1,5×IQR): 0  [lim_inf=-748.5, lim_sup=2249.5]
+  Forma (quartis): simétrica
+  Aproximadamente normal? Não
+    Critérios:
+    - |média−mediana| = 0 ≤ 0,25·DP (108.3)
+    - |skew| = 0 ≤ 0,5
+    - curtose(excesso) = -1.2 ∉ [-1, 1]
+    - Shapiro-Wilk p=4.062e-21 ⇒ rejeita normalidade a 5%
+  Conclusão: desvia da normalidade.
+
+[Numérica] idade — n=1500
+  Locação: min=-2, Q1=26, mediana=33, Q3=41, máx=65
+  Média/Dispersão: média=33.3853, DP=10.7938, variância=116.505, IQR=15, MAD=7
+  Distribuição: skew=0.0768134, curtose(excesso)=-0.0425901, Bowley=0.0666667
+  Outliers (Tukey 1,5×IQR): 6  [lim_inf=3.5, lim_sup=63.5]
+  Forma (quartis): simétrica
+  Aproximadamente normal? Sim
+    Critérios:
+    - |média−mediana| = 0.3853 ≤ 0,25·DP (2.698)
+    - |skew| = 0.07681 ≤ 0,5
+    - curtose(excesso) = -0.04259 ∈ [-1, 1]
+    - Shapiro-Wilk p=0.05234 ⇒ não rejeita normalidade a 5%
+  Conclusão: há outliers por Tukey.
+
+[Numérica] salario — n=1462
+  Locação: min=3249.98, Q1=16462.1, mediana=23981.9, Q3=35484.7, máx=137513
+  Média/Dispersão: média=28268.7, DP=16900, variância=2.85611e+08, IQR=19022.6, MAD=8588.28
+  Distribuição: skew=1.75998, curtose(excesso)=4.60616, Bowley=0.209382
+  Outliers (Tukey 1,5×IQR): 67  [lim_inf=-12071.7, lim_sup=64018.6]
+  Forma (quartis): cauda à direita (assimetria positiva)
+  Aproximadamente normal? Não
+    Critérios:
+    - |média−mediana| = 4287 > 0,25·DP (4225)
+    - |skew| = 1.76 > 0,5
+    - curtose(excesso) = 4.606 ∉ [-1, 1]
+    - Shapiro-Wilk p=nan ⇒ rejeita normalidade a 5%
+  Conclusão: há outliers por Tukey; desvia da normalidade.
+
+[Numérica] score — n=1500
+  Locação: min=0.470041, Q1=16.9068, mediana=27.8542, Q3=39.7176, máx=87.959
+  Média/Dispersão: média=29.5298, DP=16.2063, variância=262.645, IQR=22.8108, MAD=11.3789
+  Distribuição: skew=0.565468, curtose(excesso)=-0.114162, Bowley=0.0401601
+  Outliers (Tukey 1,5×IQR): 12  [lim_inf=-17.3093, lim_sup=73.9338]
+  Forma (quartis): simétrica
+  Aproximadamente normal? Não
+    Critérios:
+    - |média−mediana| = 1.676 ≤ 0,25·DP (4.052)
+    - |skew| = 0.5655 > 0,5
+    - curtose(excesso) = -0.1142 ∈ [-1, 1]
+    - Shapiro-Wilk p=1.364e-16 ⇒ rejeita normalidade a 5%
+  Conclusão: há outliers por Tukey; desvia da normalidade.
+
+[Numérica] satisfacao_1a5 — n=1478
+  Locação: min=1, Q1=3, mediana=3, Q3=4, máx=5
+  Média/Dispersão: média=3.25981, DP=1.13486, variância=1.2879, IQR=1, MAD=1
+  Distribuição: skew=-0.346306, curtose(excesso)=-0.558225, Bowley=1
+  Outliers (Tukey 1,5×IQR): 134  [lim_inf=1.5, lim_sup=5.5]
+  Forma (quartis): indefinida
+  Aproximadamente normal? Não
+    Critérios:
+    - |média−mediana| = 0.2598 ≤ 0,25·DP (0.2837)
+    - |skew| = 0.3463 ≤ 0,5
+    - curtose(excesso) = -0.5582 ∈ [-1, 1]
+    - Shapiro-Wilk p=nan ⇒ rejeita normalidade a 5%
+  Conclusão: há outliers por Tukey; desvia da normalidade.
+
+[Numérica] gasto_mensal — n=1454
+  Locação: min=33.4414, Q1=1328.96, mediana=2232.32, Q3=3573.35, máx=10745
+  Média/Dispersão: média=2651.54, DP=1773.9, variância=3.14673e+06, IQR=2244.39, MAD=1067.68
+  Distribuição: skew=1.18934, curtose(excesso)=1.56611, Bowley=0.195006
+  Outliers (Tukey 1,5×IQR): 41  [lim_inf=-2037.63, lim_sup=6939.94]
+  Forma (quartis): cauda à direita (assimetria positiva)
+  Aproximadamente normal? Não
+    Critérios:
+    - |média−mediana| = 419.2 ≤ 0,25·DP (443.5)
+    - |skew| = 1.189 > 0,5
+    - curtose(excesso) = 1.566 ∉ [-1, 1]
+    - Shapiro-Wilk p=nan ⇒ rejeita normalidade a 5%
+  Conclusão: há outliers por Tukey; desvia da normalidade.
+
+[Numérica] compras — n=1500
+  Locação: min=0, Q1=2, mediana=3, Q3=4, máx=9
+  Média/Dispersão: média=3.256, DP=1.7414, variância=3.03249, IQR=2, MAD=1
+  Distribuição: skew=0.456874, curtose(excesso)=0.176556, Bowley=0
+  Outliers (Tukey 1,5×IQR): 28  [lim_inf=-1, lim_sup=7]
+  Forma (quartis): simétrica
+  Aproximadamente normal? Não
+    Critérios:
+    - |média−mediana| = 0.256 ≤ 0,25·DP (0.4354)
+    - |skew| = 0.4569 ≤ 0,5
+    - curtose(excesso) = 0.1766 ∈ [-1, 1]
+    - Shapiro-Wilk p=1.048e-20 ⇒ rejeita normalidade a 5%
+  Conclusão: há outliers por Tukey; desvia da normalidade.
+
+Detalhes por coluna categórica
+------------------------------
+[Categórica] departamento — n=1500
+  Top-5 categorias:
+    - Vendas: 570 (38.00%)
+    - Engenharia: 411 (27.40%)
+    - Suporte: 358 (23.87%)
+    - Marketing: 133 (8.87%)
+    - None: 28 (1.87%)
+  Diversidade: categoria dominante com 38.00% do total (diversidade moderada)
+
+[Categórica] cidade — n=1500
+  Top-5 categorias:
+    - Fortaleza: 742 (49.47%)
+    - Juazeiro: 238 (15.87%)
+    - Sobral: 209 (13.93%)
+    - Iguatu: 158 (10.53%)
+    - Crato: 153 (10.20%)
+  Diversidade: categoria dominante com 49.47% do total (diversidade moderada)
+
+[Categórica] churn — n=1500
+  Top-5 categorias:
+    - Não: 1179 (78.60%)
+    - Sim: 321 (21.40%)
+  Diversidade: categoria dominante com 78.60% do total (alta concentração)
+
+[Categórica] data_cadastro — n=1500
+  Top-5 categorias:
+    - 2021-01-01 00:00:00: 1 (0.07%)
+    - 2023-09-25 00:00:00: 1 (0.07%)
+    - 2023-10-04 00:00:00: 1 (0.07%)
+    - 2023-10-03 00:00:00: 1 (0.07%)
+    - 2023-10-02 00:00:00: 1 (0.07%)
+  Diversidade: categoria dominante com 0.07% do total (alta diversidade)
+
+Conclusões gerais
+-----------------
+- Há 134 valores faltantes (0.81%). Considere imputação (média/mediana/moda) ou remoção, conforme o caso.
+- Colunas que **não** parecem aproximadamente normais: id, salario, score, satisfacao_1a5, gasto_mensal, compras.
+- Colunas com outliers (Tukey 1,5×IQR): idade, salario, score, satisfacao_1a5, gasto_mensal, compras.
+- Próximos passos sugeridos:
+  * Verificar impacto de outliers em modelos; considerar winsorização ou transformação.
+  * Para colunas não normais, considerar transformações (log, Box-Cox/Yeo-Johnson) ou métodos não paramétricos.
+  * Para categóricas muito concentradas, avaliar reagrupamento de categorias raras.
+
+Observações didáticas
+---------------------
+- IQR (Q3−Q1) cobre os 50% centrais; Tukey marca outliers fora de [Q1−1,5·IQR, Q3+1,5·IQR].
+- Quartis ajudam a ver simetria: Q2 central entre Q1 e Q3 sugere simetria; deslocamentos indicam caudas.
+- Skewness (3º momento) indica direção/intensidade da assimetria; curtose (4º) reflete caudas/achatamento.
+- A decisão de 'aproximadamente normal' segue os critérios numéricos acima (e Shapiro quando aplicável).
+- Em categóricas, concentração alta pode dificultar modelos; diversidade ajuda a generalização.
